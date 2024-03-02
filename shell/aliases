@@ -1,0 +1,20 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias bat1="cat /sys/class/power_supply/BAT0/capacity"
+alias bat2="cat /sys/class/power_supply/BAT1/capacity"
+alias p="sudo pacman"
+alias pullo="rsync -rP --delete 192.168.0.37:/home/lukas/shares/obsidian ~/"
+alias pusho="rsync -rP --delete ~/obsidian 192.168.0.37:/home/lukas/shares/"
+alias pullw="rsync -rP --delete 192.168.0.37:/home/lukas/shares/wallpapers ~/"
+alias pushw="rsync -rP --delete ~/wallpapers 192.168.0.37:/home/lukas/shares"
+alias monitor2="xrandr --output HDMI-2 --auto --above eDP-1"
+alias fixmonitors="xrandr --output HDMI-0 --auto --right-of DVI-D-0"
+alias removeunused="sudo pacman -Rsn $(pacman -Qdtq)" 
+alias ss="st flameshot gui"
+alias spt="st spotify_player"
+alias vm="quickemu --vm ~/vms/windows-10.conf --display spice"
+alias ls="exa --icons --group-directories-first"
+alias kb="setxkbmap -option caps:escape & xset r rate 500 50"
+
+alias server="ssh lukas@192.168.0.37"
+alias raspi="ssh lukas@192.168.0.6"

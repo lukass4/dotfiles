@@ -1,0 +1,23 @@
+#!/bin/sh
+
+dotfiles=/home/lukas/dotfiles/
+config=/home/lukas/.config
+home=/home/lukas
+
+ln -s $dotfiles/suckless $config
+ln -s $dotfiles/dunst $config
+ln -s $dotfiles/flameshot $config
+ln -s $dotfiles/gtk-3.0 $config
+ln -s $dotfiles/nvim $config
+ln -s $dotfiles/picom $config
+ln -s $dotfiles/shell $config
+ln -s $dotfiles/spotify-player $config
+ln -s $dotfiles/droidcam $config
+
+ln -s $dotfiles/.scripts $home
+
+ln -s $dotfiles/.nvidia-settings-rc $home/.nvidia-settings-rc
+ln -s $dotfiles/.xinitrc $home/.xinitrc
+ln -s $dotfiles/.xbindkeysrc $home/.xbindkeysrc
+ln -s $dotfiles/.zprofile $home/.zprofile
+ln -s $dotfiles/.zshrc $home/.zshrc
