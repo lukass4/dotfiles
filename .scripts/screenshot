@@ -1,0 +1,7 @@
+#!/bin/bash
+
+$(flameshot gui)
+
+location=$(find /home/lukas/screenshots/ -type f -exec ls -t1 {} + | head -1)
+
+xclip -selection clipboard -t image/png $location

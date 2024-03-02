@@ -1,0 +1,21 @@
+#!/bin/sh
+
+time=$(cat /home/lukas/.temp/countdown)
+
+
+case $1 in
+get)
+
+if [ $time ]; then
+  echo "⏰ $(date -d@$(( $(date +%s -d $time ) - $(date +%s) )) -u +%H:%M:%S)"
+  if [ $(( $(date +%s -d $time ) - $(date +%s) )) -le 0 ]; then
+    notify-send -u critical -i /home/lukas/.config/dunst/normal.png "Time's up"
+    echo "" > /home/lukas/.temp/countdown
+  fi
+fi
+
+;;
+*)
+  echo "$1" > /home/lukas/.temp/countdown
+;;
+esac

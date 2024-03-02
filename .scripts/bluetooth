@@ -1,0 +1,9 @@
+#!/bin/sh
+
+device=$(bluetoothctl devices Paired | dmenu -i -l 50)
+
+echo "${device#* }"
+device2=${device#* }
+device3=${device2%% *}
+
+[ $device3 -z ] || bluetoothctl connect $device3

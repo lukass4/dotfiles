@@ -1,0 +1,39 @@
+#!/bin/sh
+
+send_notification() {
+	volume=$(pamixer --get-volume)
+	notify-send -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "/home/lukas/.config/dunst/volume.png" "Volume" "Currently at ${volume}%" -t 2000
+}
+
+case $1 in
+status)
+  volume=$(pamixer --get-volume-human)
+  if [ $volume = "muted" ]; then
+  echo "🔇 0%"
+  else
+    echo "🔊 $volume"
+  fi
+  ;;
+up)
+	# Set the volume on (if it was muted)
+	pamixer -u
+	pamixer -i 5 
+	send_notification "$1"
+  kill -37 $(pidof dwmblocks)
+	;;
+down)
+	pamixer -u
+	pamixer -d 5 
+	send_notification "$1"
+  kill -37 $(pidof dwmblocks)
+	;;
+mute)
+	pamixer -t
+	if eval "$(pamixer --get-mute)"; then
+		dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "/home/lukas/.config/dunst/mute.png" "Volume" "Currently muted"
+	else
+		send_notification up
+	fi
+  kill -37 $(pidof dwmblocks)
+	;;
+esac

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+mic_status=$(pamixer --default-source --get-volume-human)
+
+case $1 in
+status)
+  mic_status=$(pamixer --default-source --get-volume-human)
+
+  if [ $mic_status == "muted" ]; then
+    echo "🛑 Mic muted"
+  fi
+  ;;
+*)
+  if [ $mic_status == "muted" ]; then
+    dunstify -r 9991 -u critical "Microphone activated" -i /home/lukas/.config/dunst/microphone.png -t 5000
+    pamixer --default-source -t
+  else
+    notify-send -r 9991 -u critical "Microphone muted" -i /home/lukas/.config/dunst/microphone.png -t 5000
+    pamixer --default-source -t
+  fi
+  kill -36 $(pidof dwmblocks)
+esac
+  

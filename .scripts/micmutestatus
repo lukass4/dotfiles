@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mic_status=$(pamixer --default-source --get-volume-human)
+
+if [ $mic_status == "muted" ]; then
+  echo "🛑 Mic muted"
+fi

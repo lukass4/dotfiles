@@ -1,0 +1,3 @@
+sudo systemctl start avahi-daemon
+
+uxplay

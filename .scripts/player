@@ -1,0 +1,16 @@
+#!/bin/sh
+
+run_command() {
+  playerctl $1 &
+  local title=$(playerctl metadata title) 
+  local artist=$(playerctl metadata artist) 
+  local icon=$(playerctl metadata | grep artUrl | cut -d ' ' -f 16) 
+  curl -L "$icon" > ~/.temp/icon.jpeg
+  notify-send -a "player" -u low -r 994 "Now Playing" "$title\n$artist" -i "/home/lukas/.temp/icon.jpeg" -t 2000
+}
+
+case $1 in
+status)
+  run_command "$1"
+	;;
+esac

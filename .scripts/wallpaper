@@ -1,0 +1,7 @@
+#!/bin/sh
+
+wallpaper=$(ls ~/wallpapers | dmenu -i -l 50)
+
+[ $wallpaper -z ] || feh --bg-fill /home/lukas/wallpapers/$wallpaper
+
+notify-send "Wallpaper" "Wallpaper set to $wallpaper"

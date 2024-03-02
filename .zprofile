@@ -1,1 +1,7 @@
-/home/lukas/dotfiles//.zprofile
+#
+# ~/.zprofile
+#
+
+[[ -f ~/.zshrc ]] && . ~/.zshrc
+
+startx
