@@ -2,4 +2,6 @@
 #
 updates=$(yay -Qu | wc -l)
 
-echo "📦 $updates"
+if [[ ! $updates == 0 ]]; then
+  echo "📦 $updates"
+fi
