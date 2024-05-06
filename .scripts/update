@@ -1,0 +1,4 @@
+#!/bin/sh
+
+pacman -Sy
+notify-send updating

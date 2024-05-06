@@ -2,6 +2,6 @@
 #
 updates=$(yay -Qu | wc -l)
 
-if [[ ! $updates == 0 ]]; then
+if [[ $updates > 15 ]]; then
   echo "📦 $updates"
 fi

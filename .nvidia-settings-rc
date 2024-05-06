@@ -2,7 +2,7 @@
 # /home/lukas/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA Settings utility
-# Generated on Mon Jan 22 18:17:10 2024
+# Generated on Fri Apr 19 20:41:52 2024
 #
 
 # ConfigProperties:
@@ -12,9 +12,9 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 
@@ -29,6 +29,7 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/OpenGLImageSettings=1
 0/FSAAAppEnhanced=0
 0/ShowGraphicsVisualIndicator=0
+0/XVideoSyncToDisplayID=HDMI-0
 [DPY:DVI-D-0]/RedBrightness=0.000000
 [DPY:DVI-D-0]/GreenBrightness=0.000000
 [DPY:DVI-D-0]/BlueBrightness=0.000000

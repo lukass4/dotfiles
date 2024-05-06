@@ -1,0 +1,4 @@
+#!/bin/sh
+
+python /home/lukas/programming/python/cal_script/get_current_event.py
+
