@@ -4,4 +4,5 @@
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 
-startx
+startx &
+fixmonitors

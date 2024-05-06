@@ -19,3 +19,5 @@ for f in ~/.config/shell/*; do source "$f"; done
 source ~/.config/shell/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:/home/lukas/.scripts
+
+fastfetch
