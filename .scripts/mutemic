@@ -14,9 +14,11 @@ status)
   if [ $mic_status == "muted" ]; then
     dunstify -r 9991 -u critical "Microphone activated" -i /home/lukas/.config/dunst/microphone.png -t 5000
     pamixer --default-source -t
+    paplay /home/lukas/.local/share/lukas/microphone-activated.mp3
   else
     notify-send -r 9991 -u critical "Microphone muted" -i /home/lukas/.config/dunst/microphone.png -t 5000
     pamixer --default-source -t
+    paplay /home/lukas/.local/share/lukas/microphone-muted.mp3
   fi
   kill -36 $(pidof dwmblocks)
 esac
