@@ -51,10 +51,10 @@
     XF86AudioMute
 
 "playerctl next"
-  XF86AudioNext
+  XF86AudioForward
 
 "playerctl previous"
-  XF86AudioPrev
+  XF86AudioRewind
 
 "player status"
   Shift + F9

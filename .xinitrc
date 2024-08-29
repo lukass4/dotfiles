@@ -5,5 +5,6 @@ xbindkeys &
 dunst &
 xinput --set-prop 9 'libinput Accel Speed' &
 ~/.fehbg &
+xresources &
 dwmblocks &
 exec dwm
