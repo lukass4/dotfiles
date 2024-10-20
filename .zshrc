@@ -5,6 +5,7 @@
 # Changing colours and adding font
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[cyan]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[red]%}] %{$fg[magenta]%}%~ %{$reset_color%}$%b "
+TERMINAL="st"
 
 setopt histignorealldups sharehistory
 

@@ -5,4 +5,5 @@
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 
 startx &
-fixmonitors
+fixmonitors &
+xrdb /home/lukas/.Xresources

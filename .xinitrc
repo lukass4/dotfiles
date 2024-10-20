@@ -5,6 +5,6 @@ xbindkeys &
 dunst &
 xinput --set-prop 9 'libinput Accel Speed' &
 ~/.fehbg &
-xresources &
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources &
 dwmblocks &
 exec dwm

@@ -1,3 +1,4 @@
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias bat1="cat /sys/class/power_supply/BAT0/capacity"
 alias bat2="cat /sys/class/power_supply/BAT1/capacity"
@@ -14,6 +15,10 @@ alias spt="st spotify_player"
 alias vm="quickemu --vm ~/vms/windows-10.conf --display spice"
 alias ls="exa --icons --group-directories-first"
 alias kb="setxkbmap -option caps:escape & xset r rate 500 50"
+alias xresources="xrdb /home/lukas/.Xresources"
+alias r2mod="r2modman --no-sandbox"
+alias sd="cd `pwd` && setsid st 2>/dev/null &"
 
 alias server="ssh lukas@192.168.0.37"
+alias oserver="ssh 207.246.94.119"
 alias raspi="ssh lukas@192.168.0.6"
