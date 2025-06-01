@@ -53,8 +53,14 @@
 "playerctl next"
   XF86AudioForward
 
+"playerctl next"
+  XF86AudioNext
+
 "playerctl previous"
   XF86AudioRewind
+
+"playerctl previous"
+  XF86AudioPrev
 
 "player status"
   Shift + F9
@@ -65,7 +71,14 @@
 "screenshot"
   Print
 
+"thunar"
+  XF86Explorer
 
+"firefox"
+  XF86HomePage
+
+"obsidian"
+  XF86TouchpadOn
 
 #"xterm -geom 50x20+20+20"
 #   Shift+Mod2+alt + s

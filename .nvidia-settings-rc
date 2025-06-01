@@ -2,7 +2,7 @@
 # /home/lukas/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA Settings utility
-# Generated on Wed Jul 24 21:09:53 2024
+# Generated on Tue Mar 25 20:38:27 2025
 #
 
 # ConfigProperties:
@@ -12,9 +12,9 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 
@@ -30,19 +30,9 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/FSAAAppEnhanced=0
 0/ShowGraphicsVisualIndicator=0
 0/XVideoSyncToDisplayID=HDMI-0
-[DPY:DVI-D-0]/RedBrightness=0.000000
-[DPY:DVI-D-0]/GreenBrightness=0.000000
-[DPY:DVI-D-0]/BlueBrightness=0.000000
-[DPY:DVI-D-0]/RedContrast=0.000000
-[DPY:DVI-D-0]/GreenContrast=0.000000
-[DPY:DVI-D-0]/BlueContrast=0.000000
-[DPY:DVI-D-0]/RedGamma=1.000000
-[DPY:DVI-D-0]/GreenGamma=1.000000
-[DPY:DVI-D-0]/BlueGamma=1.000000
 [DPY:DVI-D-0]/Dithering=0
 [DPY:DVI-D-0]/DitheringMode=0
 [DPY:DVI-D-0]/DitheringDepth=0
-[DPY:DVI-D-0]/DigitalVibrance=0
 [DPY:DVI-D-0]/ColorSpace=0
 [DPY:DVI-D-0]/ColorRange=0
 [DPY:DVI-D-0]/SynchronousPaletteUpdates=0
@@ -62,9 +52,19 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 [DPY:HDMI-0]/ColorSpace=0
 [DPY:HDMI-0]/ColorRange=0
 [DPY:HDMI-0]/SynchronousPaletteUpdates=0
+[DPY:DP-0]/RedBrightness=0.000000
+[DPY:DP-0]/GreenBrightness=0.000000
+[DPY:DP-0]/BlueBrightness=0.000000
+[DPY:DP-0]/RedContrast=0.000000
+[DPY:DP-0]/GreenContrast=0.000000
+[DPY:DP-0]/BlueContrast=0.000000
+[DPY:DP-0]/RedGamma=1.000000
+[DPY:DP-0]/GreenGamma=1.000000
+[DPY:DP-0]/BlueGamma=1.000000
 [DPY:DP-0]/Dithering=0
 [DPY:DP-0]/DitheringMode=0
 [DPY:DP-0]/DitheringDepth=0
+[DPY:DP-0]/DigitalVibrance=0
 [DPY:DP-0]/ColorSpace=0
 [DPY:DP-0]/ColorRange=0
 [DPY:DP-0]/SynchronousPaletteUpdates=0
