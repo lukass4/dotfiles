@@ -21,7 +21,7 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
-				"tsserver",
+				"ts_ls",
 				"html",
 				"cssls",
 				"tailwindcss",
@@ -30,6 +30,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
+				"bashls",
 			},
 		})
 
@@ -41,6 +42,8 @@ return {
 				"black",
 				"pylint",
 				"eslint_d",
+				"shellharden",
+				"beautysh",
 			},
 		})
 	end,
