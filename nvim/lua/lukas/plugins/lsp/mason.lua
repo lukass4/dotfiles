@@ -44,6 +44,7 @@ return {
 				"eslint_d",
 				"shellharden",
 				"beautysh",
+				"rustywind",
 			},
 		})
 	end,
