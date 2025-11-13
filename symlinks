@@ -14,6 +14,7 @@ ln -s $dotfiles/shell $config
 ln -s $dotfiles/spotify-player $config
 ln -s $dotfiles/droidcam $config
 ln -s $dotfiles/zathura $config
+ln -s $dotfiles/tmux $config
 
 ln -s $dotfiles/.scripts $home
 
