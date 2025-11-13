@@ -1,25 +1,18 @@
-alias ls='ls --color=auto'
+alias p="sudo pacman"
+
+alias ls="exa --icons --group-directories-first"
 alias grep='grep --color=auto'
+
 alias bat1="cat /sys/class/power_supply/BAT0/capacity"
 alias bat2="cat /sys/class/power_supply/BAT1/capacity"
-alias p="sudo pacman"
-alias pullo="rsync -rP --delete 192.168.0.37:/home/lukas/shares/obsidian ~/"
-alias pusho="rsync -rP --delete ~/obsidian 192.168.0.37:/home/lukas/shares/"
-alias pullw="rsync -rP --delete 192.168.0.37:/home/lukas/shares/wallpapers ~/"
-alias pushw="rsync -rP --delete ~/wallpapers 192.168.0.37:/home/lukas/shares"
-alias monitor2="xrandr --output HDMI-2 --auto --above eDP-1"
-alias fixmonitors="xrandr --output DP-0 --mode 1920x1080 --rate 100 --right-of HDMI-0"
-alias removeunused="sudo pacman -Rsn $(pacman -Qdtq)" 
-alias ss="st flameshot gui"
-alias spt="st spotify_player"
-alias vm="quickemu --vm ~/vms/windows-10.conf --display spice"
-alias ls="exa --icons --group-directories-first"
-alias kb="setxkbmap -option caps:escape & xset r rate 500 50 & setxkbmap -option compose:ralt"
-alias xresources="xrdb /home/lukas/.Xresources"
-alias r2mod="r2modman --no-sandbox"
-alias roblox="flatpak run org.vinegarhq.Sober"
-alias sd="cd `pwd` && setsid st 2>/dev/null &"
 
-alias server="ssh lukas@192.168.0.37"
-alias oserver="ssh 207.246.94.119"
-alias raspi="ssh lukas@192.168.0.6"
+alias kb="setxkbmap -option caps:escape && xset r rate 300 50 && setxkbmap -option compose:ralt"
+
+alias fixmonitors="xrandr --output DP-0 --mode 1920x1080 --rate 100 --right-of HDMI-0"
+
+alias vm="quickemu --vm /hdd/mnt/vms/windows-10.conf --display spice"
+alias xresources="xrdb /home/lukas/.Xresources"
+
+alias roblox="flatpak run org.vinegarhq.Sober"
+
+alias raspi="ssh 192.168.0.6"
