@@ -5,7 +5,7 @@ return {
 
     auto_session.setup({
       auto_restore_enabled = false,
-      auto_session_supress_dirs = { "~/", "~/programming" }
+      suppressed_dirs = { "~/", "~/programming" },
     })
 
     local keymap = vim.keymap

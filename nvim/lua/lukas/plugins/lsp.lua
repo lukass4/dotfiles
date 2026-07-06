@@ -21,6 +21,17 @@ return {
 					"bashls",
 				},
 			})
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"prettier",
+					"stylua",
+					"eslint_d",
+					"isort",
+					"black",
+					"pylint",
+					"rustywind",
+				},
+			})
 		end,
 	},
 	{
@@ -35,7 +46,7 @@ return {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 				callback = function(ev)
 					local keymap = vim.keymap
-					local opts = { buffer = bufnr, silent = true }
+					local opts = { buffer = ev.buf, silent = true }
 
 					opts.desc = "Show LSP references"
 					keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
@@ -62,13 +73,12 @@ return {
 					keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
 					opts.desc = "Restart LSP"
-					keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+					keymap.set("n", "<leader>rs", "<cmd>lsp restart<CR>", opts)
 				end,
 			})
 
 			vim.lsp.config("*", {
 				capabilities = capabilities,
-				on_attach = default_on_attach,
 			})
 
 			vim.lsp.config("emmet_ls", {
@@ -77,7 +87,10 @@ return {
 
 			vim.lsp.config("lua_ls", {
 				settings = {
-					Lua = { workspace = { library = vim.api.nvim_get_runtime_file("", true) } },
+					Lua = {
+						diagnostics = { globals = { "vim" } },
+						workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+					},
 				},
 			})
 		end,
