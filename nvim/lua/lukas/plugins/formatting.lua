@@ -19,6 +19,8 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				php = { "pint" },
+				blade = { "blade-formatter" },
 			},
 
 			format_on_save = {

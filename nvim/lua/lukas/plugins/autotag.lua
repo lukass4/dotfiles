@@ -14,6 +14,10 @@ return {
 					enable_close = false,
 				},
 			},
+			["blade"] = {
+				enable_close = true,
+				enable_rename = true,
+			},
 		})
 	end,
 }

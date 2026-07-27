@@ -27,6 +27,8 @@ return {
 				"vimdoc",
 				"c",
 				"python",
+				"php",
+				"blade",
 			},
 			incremental_selection = {
 				enable = true,

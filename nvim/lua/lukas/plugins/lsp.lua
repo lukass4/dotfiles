@@ -19,6 +19,7 @@ return {
 					"prismals",
 					"pyright",
 					"bashls",
+					"intelephense",
 				},
 			})
 			require("mason-tool-installer").setup({
@@ -30,6 +31,7 @@ return {
 					"black",
 					"pylint",
 					"rustywind",
+					"blade-formatter",
 				},
 			})
 		end,
@@ -90,6 +92,22 @@ return {
 					Lua = {
 						diagnostics = { globals = { "vim" } },
 						workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+					},
+				},
+			})
+
+			vim.lsp.config("intelephense", {
+				capabilities = capabilities,
+				settings = {
+					intelephense = {
+						files = {
+							maxSize = 5000000,
+						},
+						environment = {
+							includePaths = {
+								"vendor",
+							},
+						},
 					},
 				},
 			})

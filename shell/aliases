@@ -16,3 +16,4 @@ alias xresources="xrdb /home/lukas/.Xresources"
 alias roblox="flatpak run org.vinegarhq.Sober"
 
 alias raspi="ssh 192.168.0.6"
+alias sail="./vendor/bin/sail"
