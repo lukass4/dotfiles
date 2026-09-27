@@ -80,6 +80,12 @@
 "obsidian"
   XF86TouchpadOn
 
+"brigthnessctl s +10%"
+  XF86MonBrightnessUp
+
+"brigthnessctl s -10%"
+  XF86MonBrightnessDown
+
 #"xterm -geom 50x20+20+20"
 #   Shift+Mod2+alt + s
 #
