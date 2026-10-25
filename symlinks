@@ -15,10 +15,10 @@ ln -s $dotfiles/spotify-player $config
 ln -s $dotfiles/droidcam $config
 ln -s $dotfiles/zathura $config
 ln -s $dotfiles/tmux $config
-ln -s $dotfiles/redshift $config
 
 ln -s $dotfiles/.scripts $home
 
+ln -s $dotfiles/redshift.conf $config/redshift.conf
 ln -s $dotfiles/.nvidia-settings-rc $home/.nvidia-settings-rc
 ln -s $dotfiles/.xinitrc $home/.xinitrc
 ln -s $dotfiles/.xbindkeysrc $home/.xbindkeysrc
