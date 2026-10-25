@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+for bat in /sys/class/power_supply/BAT*; do
+    [ -d "$bat" ] || continue
+
+    if [ -f "$bat/capacity" ]; then
+        pct=$(cat "$bat/capacity")
+    else
+        now=$(cat "$bat/energy_now" 2>/dev/null || cat "$bat/charge_now")
+        full=$(cat "$bat/energy_full" 2>/dev/null || cat "$bat/charge_full")
+        pct=$((100 * now / full))
+    fi
+
+    status=$(cat "$bat/status")
+
+    if [ "$status" = "Charging" ]; then
+        icon="🔌"
+    elif [ "$pct" -ge 50 ]; then
+        icon="🔋"
+    elif [ "$pct" -ge 20 ]; then
+        icon="🪫"
+    else
+        icon="⚠️"
+    fi
+
+    printf "%s %d%% " "$icon" "$pct"
+done
+
+echo
